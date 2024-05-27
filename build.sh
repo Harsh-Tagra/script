@@ -1,12 +1,12 @@
 sudo apt install git-lfs
 git lfs install
-
+repo init -u https://github.com/RisingTechOSS/android -b fourteen --git-lfs
 rm -rf vendor/gms
 rm -rf .repo/projects/vendor/gms.git
 rm -rf .repo/project-objects/*/android_vendor_gms.git 
 rm -rf .repo/local_manifests/ 
 # Clone RisingTechOSS 14
-repo init --depth 1 -u https://github.com/RisingTechOSS/android.git -b fourteen --git-lfs
+repo init  -u https://github.com/RisingTechOSS/android.git -b fourteen --git-lfs
 # Clone local_manifests repository
 git clone https://github.com/krishnaspeace/local_manifests.git --depth 1 -b main .repo/local_manifests
 if [ ! 0 == 0 ]
