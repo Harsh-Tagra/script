@@ -1,4 +1,4 @@
-rm -rf .repo/local_manifests/ 
+
 # Clone RisingTechOSS 14
 repo init --depth 1 -u https://github.com/RisingTechOSS/android.git -b fourteen --git-lfs
 # Clone local_manifests repository
@@ -15,7 +15,11 @@ git clone https://github.com/xiaomi-msm8953-devs/android_vendor_fingerprint_open
 export BUILD_USERNAME=harsh
 export BUILD_HOSTNAME=crave
 export RISING_MAINTAINER=Harsh Tagra
-export BUILD_BROKEN_MISSING_REQUIRED_MODULES=true
+export WITH_GMS=true
+export TARGET_CORE_GMS=true
+export TARGET_CORE_GMS_EXTRAS=true
+export TARGET_DEFAULT_PIXEL_LAUNCHER=true
+
 source build/envsetup.sh
 # build
 riseup ysl userdebug
