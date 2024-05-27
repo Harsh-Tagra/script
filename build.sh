@@ -1,6 +1,5 @@
-rm -rf .repo/local_manifests/ 
-# Clone RisingTechOSS 14
-repo init --depth 1 -u https://github.com/RisingTechOSS/android.git -b fourteen --git-lfs
+# Clone Evolution X 
+repo init --depth 1 -u https://github.com/Evolution-X/manifest -b u --git-lfs
 # Clone local_manifests repository
 git clone https://github.com/krishnaspeace/local_manifests.git --depth 1 -b main .repo/local_manifests
 if [ ! 0 == 0 ]
@@ -14,9 +13,7 @@ git clone https://github.com/xiaomi-msm8953-devs/android_vendor_fingerprint_open
 # Set up build environment
 export BUILD_USERNAME=harsh
 export BUILD_HOSTNAME=crave
-export RISING_MAINTAINER=Harsh Tagra
-export BUILD_BROKEN_MISSING_REQUIRED_MODULES=true
 source build/envsetup.sh
 # build
-riseup ysl userdebug
-rise b
+lunch aosp_ysl-userdebug
+mka bacon
