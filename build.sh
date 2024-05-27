@@ -16,7 +16,6 @@ export BUILD_HOSTNAME=crave
 export RISING_MAINTAINER=Harsh Tagra
 export WITH_GMS=true
 export TARGET_CORE_GMS=true
-export TARGET_CORE_GMS_EXTRAS=true
 export TARGET_DEFAULT_PIXEL_LAUNCHER=true
 export BUILD_BROKEN_MISSING_REQUIRED_MODULES=true
 source build/envsetup.sh
