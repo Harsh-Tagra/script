@@ -1,6 +1,7 @@
 sudo apt install git-lfs
 git lfs install
-repo init  --depth 1 -u https://github.com/RisingTechOSS/android -b fourteen --git-lfs
+repo init   -u https://github.com/RisingTechOSS/android -b fourteen --git-lfs
+repo sync -c --no-clone-bundle --optimized-fetch --prune --force-sync -j$(nproc --all)
 rm -rf vendor/gms
 rm -rf .repo/projects/vendor/gms.git
 rm -rf .repo/project-objects/*/android_vendor_gms.git 
