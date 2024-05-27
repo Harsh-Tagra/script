@@ -1,3 +1,4 @@
+rm -rf .repo/local_manifests/ 
 # Clone RisingTechOSS 14
 repo init --depth 1 -u https://github.com/RisingTechOSS/android.git -b fourteen --git-lfs
 # Clone local_manifests repository
