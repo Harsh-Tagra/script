@@ -1,3 +1,9 @@
+sudo apt install git-lfs
+git lfs install
+
+rm -rf vendor/gms
+rm -rf .repo/projects/vendor/gms.git
+rm -rf .repo/project-objects/*/android_vendor_gms.git 
 rm -rf .repo/local_manifests/ 
 # Clone RisingTechOSS 14
 repo init --depth 1 -u https://github.com/RisingTechOSS/android.git -b fourteen --git-lfs
@@ -15,6 +21,10 @@ git clone https://github.com/xiaomi-msm8953-devs/android_vendor_fingerprint_open
 export BUILD_USERNAME=harsh
 export BUILD_HOSTNAME=crave
 export RISING_MAINTAINER=Harsh Tagra
+export WITH_GMS=true
+export TARGET_CORE_GMS=true
+export TARGET_CORE_GMS_EXTRAS=true
+export TARGET_DEFAULT_PIXEL_LAUNCHER=true
 export BUILD_BROKEN_MISSING_REQUIRED_MODULES=true
 source build/envsetup.sh
 # build
