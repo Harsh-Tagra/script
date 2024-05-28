@@ -25,7 +25,6 @@ export RISING_MAINTAINER=harsh
 export WITH_GMS=true
 export TARGET_CORE_GMS=true
 export TARGET_CORE_GMS_EXTRAS=true
-export TARGET_DEFAULT_PIXEL_LAUNCHER=true
 source build/envsetup.sh
 # build
 riseup ysl userdebug
