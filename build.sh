@@ -52,7 +52,6 @@ if [ ! -f "$sign"  ]; then
     for cert in bluetooth cyngn-app media networkstack platform releasekey sdk_sandbox shared testcert testkey verity; do
         ./development/tools/make_key ~/.android-certs/$cert "$subject"
     done
- 
     mkdir vendor/lineage-priv
    mv ~/.android-certs vendor/lineage-priv/keys
 echo "PRODUCT_DEFAULT_DEV_CERTIFICATE := vendor/lineage-priv/keys/releasekey" > vendor/lineage-priv/keys/keys.mk
