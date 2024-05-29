@@ -19,11 +19,14 @@ if [ ! 0 == 0 ]
 rm -rf vendor/fingerprint/opensurce/interfaces
 git clone https://github.com/xiaomi-msm8953-devs/android_vendor_fingerprint_opensource_interfaces vendor/fingerprint/opensource/interfaces
 # Set up build environment
-export BUILD_USERNAME=harsh
+rm -rf  vendor/rising/config/version.mk
+git clone https://github.com/Harsh-Tagra/R  --depth 1 -b main  vendor/rising/config/
+export BUILD_USERNAME=Harsh-Tagra
 export BUILD_HOSTNAME=crave
 export RISING_MAINTAINER=harsh
 export WITH_GMS=true
 export TARGET_CORE_GMS=true
+
 subject='/C=IN/ST=Haryana/L=Panipat View/O=harshtagra/OU=harshtagra/CN=harshtagra/emailAddress=harshtagra905@gmail.com'
 mkdir ~/.android-certs
 for cert in bluetooth cyngn-app media networkstack platform releasekey sdk_sandbox shared testcert testkey verity; do \
