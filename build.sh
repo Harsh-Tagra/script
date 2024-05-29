@@ -35,8 +35,7 @@ done
 cp ./development/tools/make_key ~/.android-certs/
 sed -i 's|2048|4096|g' ~/.android-certs/make_key
 
-fi
-export 
+fi 
 source build/envsetup.sh
 # build
 riseup ysl userdebug
