@@ -42,8 +42,7 @@ export BUILD_HOSTNAME=crave
 export RISING_MAINTAINER=Harsh-Tagra
 export WITH_GMS=true
 export TARGET_CORE_GMS=true
-export PRODUCT_PACKAGES += \
-Velvet 
+
 
 # Create and sign Android certificates if not exits 
 if [ ! -f "$sign"  ]; then
