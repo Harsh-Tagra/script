@@ -53,11 +53,14 @@ if [ ! -f "$sign"  ]; then
         ./development/tools/make_key ~/.android-certs/$cert "$subject"
     done
     cp ./development/tools/make_key ~/.android-certs/
-    sed -i 's|2048|4096|g' ~/.android-certs/make_key
-    for apex in com.android.adbd com.android.adservices com.android.adservices.api com.android.appsearch com.android.art com.android.bluetooth com.android.btservices com.android.cellbroadcast com.android.compos com.android.configinfrastructure com.android.connectivity.resources com.android.conscrypt com.android.devicelock com.android.extservices com.android.graphics.pdf com.android.hardware.biometrics.face.virtual com.android.hardware.biometrics.fingerprint.virtual com.android.hardware.boot com.android.hardware.cas com.android.hardware.wifi com.android.healthfitness com.android.hotspot2.osulogin com.android.i18n com.android.ipsec com.android.media com.android.media.swcodec com.android.mediaprovider com.android.nearby.halfsheet com.android.networkstack.tethering com.android.neuralnetworks com.android.ondevicepersonalization com.android.os.statsd com.android.permission com.android.resolv com.android.rkpd com.android.runtime com.android.safetycenter.resources com.android.scheduling com.android.sdkext com.android.support.apexer com.android.telephony com.android.telephonymodules com.android.tethering com.android.tzdata com.android.uwb com.android.uwb.resources com.android.virt com.android.vndk.current com.android.vndk.current.on_vendor com.android.wifi com.android.wifi.dialog com.android.wifi.resources com.google.pixel.camera.hal com.google.pixel.vibrator.hal com.qorvo.uwb; do
-        ~/.android-certs/make_key ~/.android-certs/$apex "$subject"
-        openssl pkcs8 -in ~/.android-certs/$apex.pk8 -inform DER -out ~/.android-certs/$apex.pem
-    done
+ 
+    mkdir vendor/extra
+    mkdir vendor/lineage-priv
+    mv ~/.android-certs vendor/extra/keys
+    echo "PRODUCT_DEFAULT_DEV_CERTIFICATE := vendor/extra/keys/releasekey" > vendor/extra/product.mk
+echo "PRODUCT_DEFAULT_DEV_CERTIFICATE := vendor/lineage-priv/keys/releasekey" > vendor/lineage-priv/keys/keys.mk
+  curl -o vendor/lineage-priv/keys/BUILD.bazel https://raw.githubusercontent.com/sounddrill31/crave_aosp_builder/signing/configs/signing/BUILD.bazel
+    cat vendor/lineage-priv/keys/BUILD.bazel # For debugging, this doesn't contain any sensitive stuff
 fi
 
 # Source the build environment setup script
@@ -65,10 +68,6 @@ source build/envsetup.sh
 
 # Build the environment for ysl userdebug
 riseup ysl userdebug
-
-# Download and execute the signing script
-curl -O https://raw.githubusercontent.com/ObsidianMaximus/scripts/master/signing/Sign.sh
-bash Sign.sh
 
 # Execute the build command
 rise b
