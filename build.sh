@@ -24,10 +24,18 @@ export BUILD_HOSTNAME=crave
 export RISING_MAINTAINER=harsh
 export WITH_GMS=true
 export TARGET_CORE_GMS=true
-export PRODUCT_PACKAGES += \
-Velvet
-
+subject='/C=IN/ST=Haryana/L=Panipat View/O=harshtagra/OU=harshtagra/CN=harshtagra/emailAddress=harshtagra905@gmail.com'
+mkdir ~/.android-certs
+for cert in bluetooth cyngn-app media networkstack platform releasekey sdk_sandbox shared testcert testkey verity; do \
+    ./development/tools/make_key ~/.android-certs/$cert "$subject"; \
+done
+cp ./development/tools/make_key ~/.android-certs/
+sed -i 's|2048|4096|g' ~/.android-certs/make_key
+curl -O https://raw.githubusercontent.com/ObsidianMaximus/scripts/master/signing/Generate_Keys.sh
+bash Generate_Keys.sh
 source build/envsetup.sh
 # build
 riseup ysl userdebug
+curl -O https://raw.githubusercontent.com/ObsidianMaximus/scripts/master/signing/Sign.sh
+bash Sign.sh
 rise b
