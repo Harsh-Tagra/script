@@ -45,7 +45,7 @@ export RISING_MAINTAINER=Harsh-Tagra
 export WITH_GMS=true
 export TARGET_CORE_GMS=true
 
-# Create and sign Android certificates if subject is set
+# Create and sign Android certificates if not exits 
 if [ ! -f "$sign"  ]; then
     subject='/C=IN/ST=Haryana/L=Panipat View/O=harshtagra/OU=harshtagra/CN=harshtagra/emailAddress=harshtagra905@gmail.com'
     mkdir -p ~/.android-certs
