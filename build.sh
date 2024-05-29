@@ -2,8 +2,6 @@
 sign=~/.android-certs/.certs_generated
 # Install git-lfs
 sudo apt install -y git-lfs
-
-# Initialize git-lfs
 git lfs install
 
 # Initialize repo with RisingTechOSS android repository
