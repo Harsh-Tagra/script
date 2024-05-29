@@ -20,7 +20,7 @@ rm -rf vendor/fingerprint/opensurce/interfaces
 git clone https://github.com/xiaomi-msm8953-devs/android_vendor_fingerprint_opensource_interfaces vendor/fingerprint/opensource/interfaces
 # Set up build environment
 rm -rf  vendor/rising/config/version.mk
-git clone https://github.com/Harsh-Tagra/R  --depth 1 -b main  vendor/rising/config/
+git clone https://github.com/Harsh-Tagra/R.git  --depth 1 -b main  vendor/rising/config/
 export BUILD_USERNAME=Harsh-Tagra
 export BUILD_HOSTNAME=crave
 export RISING_MAINTAINER=harsh
