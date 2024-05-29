@@ -54,7 +54,6 @@ if [ ! -f "$sign"  ]; then
     done
     cp ./development/tools/make_key ~/.android-certs/
  
-    mkdir vendor/extra
     mkdir vendor/lineage-priv
    mv ~/.android-certs vendor/lineage-priv/keys
 echo "PRODUCT_DEFAULT_DEV_CERTIFICATE := vendor/lineage-priv/keys/releasekey" > vendor/lineage-priv/keys/keys.mk
