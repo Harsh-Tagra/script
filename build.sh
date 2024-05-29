@@ -25,9 +25,6 @@ export RISING_MAINTAINER=harsh
 export WITH_GMS=true
 export TARGET_CORE_GMS=true
 export PRODUCT_PACKAGES += \
-CalculatorGooglePrebuilt\
-CalendarGooglePrebuilt \
-Google\
 Velvet\
 
 source build/envsetup.sh
