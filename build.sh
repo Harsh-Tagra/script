@@ -18,11 +18,11 @@ rm -rf .repo/local_manifests/
 repo init --depth=1 -u https://github.com/RisingTechOSS/android.git -b fourteen --git-lfs
 
 # Clone local_manifests repository
-git clone https://github.com/krishnaspeace/local_manifests.git --depth 1 -b main .repo/local_manifests
+git clone https://github.com/Harsh-Tagra/local_manifests.git --depth 1 -b main .repo/local_manifests
 
 # Check if local_manifests directory is empty and fetch if so
 if [ ! -d ".repo/local_manifests" ] || [ -z "$(ls -A .repo/local_manifests)" ]; then
-    curl -o .repo/local_manifests https://github.com/krishnaspeace/local_manifests.git
+    curl -o .repo/local_manifests https://github.com/Harsh-Tagra/local_manifests.git
 fi
 
 # Sync repo
