@@ -1,5 +1,5 @@
 #!/bin/bash
-
+sign=~/.android-certs/.certs_generated
 # Install git-lfs
 sudo apt install -y git-lfs
 
@@ -46,8 +46,8 @@ export WITH_GMS=true
 export TARGET_CORE_GMS=true
 
 # Create and sign Android certificates if subject is set
-if [ -n "$subject" ]; then
-    export subject='/C=IN/ST=Haryana/L=Panipat View/O=harshtagra/OU=harshtagra/CN=harshtagra/emailAddress=harshtagra905@gmail.com'
+if [ ! -f "$sign"  ]; then
+    subject='/C=IN/ST=Haryana/L=Panipat View/O=harshtagra/OU=harshtagra/CN=harshtagra/emailAddress=harshtagra905@gmail.com'
     mkdir -p ~/.android-certs
     for cert in bluetooth cyngn-app media networkstack platform releasekey sdk_sandbox shared testcert testkey verity; do
         ./development/tools/make_key ~/.android-certs/$cert "$subject"
