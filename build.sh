@@ -21,9 +21,9 @@ git clone https://github.com/xiaomi-msm8953-devs/android_vendor_fingerprint_open
 # Set up build environment
 rm -rf  vendor/rising/config/version.mk
 git clone https://github.com/Harsh-Tagra/R.git  --depth 1 -b main  vendor/rising/config/
-export BUILD_USERNAME=Harsh-Tagra
+export BUILD_USERNAME=harsh
 export BUILD_HOSTNAME=crave
-export RISING_MAINTAINER=harsh
+export RISING_MAINTAINER=Harsh-Tagra
 export WITH_GMS=true
 export TARGET_CORE_GMS=true
 
