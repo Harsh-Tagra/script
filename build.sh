@@ -31,8 +31,7 @@ rm -rf vendor/fingerprint/opensource/interfaces
 git clone https://github.com/xiaomi-msm8953-devs/android_vendor_fingerprint_opensource_interfaces vendor/fingerprint/opensource/interfaces
 
 # Set up build environment by cloning required repository
-rm -rf vendor/rising/config/version.mk
-git clone https://github.com/Harsh-Tagra/R.git --depth 1 -b main vendor/rising/config/
+
 
 # Export environment variables for the build
 export BUILD_USERNAME=harsh
