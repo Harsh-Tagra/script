@@ -19,8 +19,7 @@ repo init --depth=1 -u https://github.com/RisingTechOSS/android.git -b fourteen 
 # Clone local_manifests repository
 git clone https://github.com/Harsh-Tagra/local_manifests.git --depth 1 -b main .repo/local_manifests
 
-# Check if local_manifests directory is empty and fetch if so
-if [ ! -d ".repo/local_manifests" ] || [ -z "$(ls -A .repo/local_manifests)" ]; then
+if [! 0 == 0 ]; then
     curl -o .repo/local_manifests https://github.com/Harsh-Tagra/local_manifests.git
 fi
 
