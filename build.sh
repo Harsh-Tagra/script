@@ -54,8 +54,18 @@ if [ ! -f "$sign"  ]; then
     mkdir vendor/lineage-priv
    mv ~/.android-certs vendor/lineage-priv/keys
 echo "PRODUCT_DEFAULT_DEV_CERTIFICATE := vendor/lineage-priv/keys/releasekey" > vendor/lineage-priv/keys/keys.mk
-  curl -o vendor/lineage-priv/keys/BUILD.bazel https://raw.githubusercontent.com/sounddrill31/crave_aosp_builder/signing/configs/signing/BUILD.bazel
 
+cat <<EOF > vendor/lineage-priv/keys/BUILD.bazel
+filegroup(
+    name = "android_certificate_directory",
+    srcs = glob([
+        "*.pk8",
+        "*.pem",
+    ]),
+    visibility = ["//visibility:public"],
+)
+
+EOF
 fi
 
 # Source the build environment setup script
