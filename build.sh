@@ -55,7 +55,7 @@ if [ ! -f "$sign"  ]; then
    mv ~/.android-certs vendor/lineage-priv/keys
 echo "PRODUCT_DEFAULT_DEV_CERTIFICATE := vendor/lineage-priv/keys/releasekey" > vendor/lineage-priv/keys/keys.mk
   curl -o vendor/lineage-priv/keys/BUILD.bazel https://raw.githubusercontent.com/sounddrill31/crave_aosp_builder/signing/configs/signing/BUILD.bazel
-    cat vendor/lineage-priv/keys/BUILD.bazel # For debugging, this doesn't contain any sensitive stuff
+
 fi
 
 # Source the build environment setup script
