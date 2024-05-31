@@ -37,7 +37,7 @@ export TARGET_CORE_GMS=true
 source build/envsetup.sh
 
 # Build the environment for ysl userdebug
-riseup ysl userdebug
+lunch blaze_ysl-userdebug
 
 # Execute the build command
-rise b
+make bacon
