@@ -41,28 +41,6 @@ export WITH_GMS=true
 export TARGET_CORE_GMS=true
 
 
-# Create and sign Android certificates if not exits 
-
-    subject='/C=IN/ST=Haryana/L=Panipat View/O=harshtagra/OU=harshtagra/CN=harshtagra/emailAddress=harshtagra905@gmail.com'
-    mkdir -p ~/.android-certs
-    for cert in bluetooth cyngn-app media networkstack platform releasekey sdk_sandbox shared testcert testkey verity; do
-        ./development/tools/make_key ~/.android-certs/$cert "$subject"
-    done
-mkdir -p vendor/lineage-priv/keys
-mv ~/.android-certs/* vendor/lineage-priv/keys/
-echo "PRODUCT_DEFAULT_DEV_CERTIFICATE := vendor/lineage-priv/keys/releasekey" > vendor/lineage-priv/keys/keys.mk
-
-cat <<EOF > vendor/lineage-priv/keys/BUILD.bazel
-filegroup(
-    name = "android_certificate_directory",
-    srcs = glob([
-        "*.pk8",
-        "*.pem",
-    ]),
-    visibility = ["//visibility:public"],
-)
-EOF
-
 
 # Source the build environment setup script
 source build/envsetup.sh
