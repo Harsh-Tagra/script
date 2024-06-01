@@ -10,9 +10,9 @@ rm -rf hardware/xiaomi
 # Clone local_manifests repository
 git clone https://github.com/Harsh-Tagra/local_manifests.git --depth 1 -b main .repo/local_manifests
 
-if [! 0 == 0 ]; then
-    curl -o .repo/local_manifests https://github.com/Harsh-Tagra/local_manifests.git
-fi
+if [ ! 0 == 0 ]
+ then   curl -o .repo/local_manifests  https://github.com/Harsh-Tagra/local_manifests.git
+ fi
 
 # Sync repo
 /opt/crave/resync.sh
