@@ -6,7 +6,7 @@ git lfs install
 
 # Clone RisingTechOSS 14 repository with depth 1
 repo init --depth=1 -u https://github.com/ProjectBlaze/manifest -b 14-QPR2
-
+rm -rf hardware/xiaomi
 # Clone local_manifests repository
 git clone https://github.com/Harsh-Tagra/local_manifests.git --depth 1 -b main .repo/local_manifests
 
