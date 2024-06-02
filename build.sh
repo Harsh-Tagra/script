@@ -4,7 +4,7 @@ sudo apt install -y git-lfs
 git lfs install
 repo init   -u  https://github.com/ProjectBlaze/manifest -b 14-QPR2 --git-lfs
 repo sync -c --no-clone-bundle --optimized-fetch --prune --force-sync -j$(nproc --all)
-rm -rf hardware/xiaomi
+
 rm -rf .repo/local_manifests/ 
 # Clone RisingTechOSS 14 repository with depth 1
 repo init --depth=1 -u https://github.com/ProjectBlaze/manifest -b 14-QPR2
