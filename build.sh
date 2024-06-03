@@ -31,7 +31,6 @@ export BUILD_USERNAME=harsh
 export BUILD_HOSTNAME=crave
 export BLAZE_MAINTAINER=Harsh-Tagra
 export WITH_GMS=true
-export TARGET_CORE_GMS=true
 export BUILD_BROKEN_MISSING_REQUIRED_MODULES=true 
 
 
