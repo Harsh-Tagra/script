@@ -1,4 +1,5 @@
 # Clone Evolution X 
+rm -rf .repo/local_manifests/
 repo init --depth 1 -u https://github.com/Evolution-X/manifest -b u --git-lfs
 # Clone local_manifests repository
 
