@@ -14,7 +14,7 @@ if [ ! 0 == 0 ]
  then   curl -o .repo/local_manifests https://github.com/Harsh-Tagra/local_manifests.git
  fi
 # repo sync
-/opt/crave/resync.sh
+curl https://raw.githubusercontent.com/sounddrill31/docker-images/04449990912b9d7ee594193883740037f0ac80a7/aosp/common/resync.sh | bash
 # Fixing fingerprint
 rm -rf vendor/fingerprint/opensurce/interfaces
 git clone https://github.com/xiaomi-msm8953-devs/android_vendor_fingerprint_opensource_interfaces vendor/fingerprint/opensource/interfaces
