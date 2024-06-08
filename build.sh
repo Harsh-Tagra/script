@@ -8,8 +8,8 @@ if [ ! 0 == 0 ]
  then   curl -o .repo/local_manifests https://github.com/Harsh-Tagra/local_manifests.git
  fi
 # repo sync
-
-repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
+/opt/crave/resync.sh
+# repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 # Fixing fingerprint
 rm -rf vendor/fingerprint/opensurce/interfaces
 git clone https://github.com/xiaomi-msm8953-devs/android_vendor_fingerprint_opensource_interfaces vendor/fingerprint/opensource/interfaces
