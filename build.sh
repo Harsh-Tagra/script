@@ -18,5 +18,4 @@ export SAKURA_BUILD_TYPE=gapps
 export TARGET_SUPPORTS_64_BIT_APPS=true
 source build/envsetup.sh
 # build
-mka target-files-package otatools; \
-/opt/crave/crave_sign.sh
+mka bacon
