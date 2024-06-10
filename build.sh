@@ -16,5 +16,6 @@ export BUILD_HOSTNAME=crave
 export SAKURA_BUILD_TYPE=gapps
 export TARGET_SUPPORTS_64_BIT_APPS=true
 source build/envsetup.sh
+lunch lineage_ysl-ap1a-userdebug
 # build
 mka bacon
