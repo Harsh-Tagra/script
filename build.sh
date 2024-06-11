@@ -15,6 +15,8 @@ export BUILD_USERNAME=harsh
 export BUILD_HOSTNAME=crave
 export SAKURA_BUILD_TYPE=gapps
 export TARGET_SUPPORTS_64_BIT_APPS=true
+export TARGET_BOOT_ANIMATION_RES= 720
+export SAKURA_MAINTAINER=Harsh-Tagra
 source build/envsetup.sh
 lunch lineage_ysl-ap1a-userdebug
 # build
