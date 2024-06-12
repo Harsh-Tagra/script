@@ -16,7 +16,7 @@ export SAKURA_MAINTAINER=Harsh-Tagra
 source build/envsetup.sh
 subject='/C=IN/ST=Haryana/L=Panipat/O=Android/OU=Android/CN=Android/emailAddress=harshtagra905@gmail.com'
 for cert in media platform releasekey sdk_sandbox shared testkey verity; do \
-    ./development/tools/make_key vendor/keys/$cert "$subject"; \
+  pipe it ./development/tools/make_key vendor/keys/$cert "$subject"; \
 done
 curl -o /vendor/keys/ https://raw.githubusercontent.com/sppidy/cravesign/main/keys.mk 
 sudo apt-get install openssl
