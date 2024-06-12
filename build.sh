@@ -5,7 +5,8 @@ rm -rf .repo/local_manifests
 git clone https://github.com/Harsh-Tagra/local_manifests.git --depth 1 -b main .repo/local_manifests
 /opt/crave/resync.sh
 # Fixing fingerprint
-rm -rf vendor/fingerprint/opensurce/interfaces
+ sudo rm -rf vendor/fingerprint/opensource/interfaces
+
 git clone https://github.com/xiaomi-msm8953-devs/android_vendor_fingerprint_opensource_interfaces vendor/fingerprint/opensource/interfaces
 # Set up build environment
 export BUILD_USERNAME=harsh
