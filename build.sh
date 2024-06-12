@@ -19,7 +19,8 @@ subject='/C=IN/ST=Haryana/L=Panipat/O=Android/OU=Android/CN=Android/emailAddress
 for cert in media platform releasekey sdk_sandbox shared testkey verity; do \
   echo '' |  ./development/tools/make_key vendor/keys/$cert "$subject"; \
 done
-curl -o /vendor/keys/ https://raw.githubusercontent.com/sppidy/cravesign/main/keys.mk 
+sudo curl -o vendor/keys/keys.mk https://raw.githubusercontent.com/sppidy/cravesign/main/keys.mk
+
 sudo apt-get install openssl
 
 brunch lineage_ysl-ap1a-userdebug
