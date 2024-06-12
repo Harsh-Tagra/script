@@ -14,6 +14,7 @@ export TARGET_SUPPORTS_64_BIT_APPS=true
 export TARGET_BOOT_ANIMATION_RES=720
 export SAKURA_MAINTAINER=Harsh-Tagra
 source build/envsetup.sh
+mkdir vendor/keys/
 subject='/C=IN/ST=Haryana/L=Panipat/O=Android/OU=Android/CN=Android/emailAddress=harshtagra905@gmail.com'
 for cert in media platform releasekey sdk_sandbox shared testkey verity; do \
   echo '' |  ./development/tools/make_key vendor/keys/$cert "$subject"; \
