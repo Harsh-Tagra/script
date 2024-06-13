@@ -17,5 +17,5 @@ export TARGET_BOOT_ANIMATION_RES=720
 export SAKURA_MAINTAINER=Harsh-Tagra
 source build/envsetup.sh
 lunch lineage_ysl-ap1a-userdebug
-mka target-files-package otatools
+mka bacon
 
