@@ -1,44 +1,24 @@
-#!/bin/bash
-# Install git-lfs
-sudo apt install -y git-lfs
+sudo apt install git-lfs
 git lfs install
-repo init   -u  https://github.com/ProjectBlaze/manifest -b 14-QPR2 --git-lfs
-repo sync -c --no-clone-bundle --optimized-fetch --prune --force-sync -j$(nproc --all)
+repo init --depth=1 -u https://github.com/ProjectSakura/android.git -b 14 --git-lfs
 
-rm -rf .repo/local_manifests/ 
-# Clone RisingTechOSS 14 repository with depth 1
-repo init --depth=1 -u https://github.com/ProjectBlaze/manifest -b 14-QPR2
-
-# Clone local_manifests repository
 git clone https://github.com/Harsh-Tagra/local_manifests.git --depth 1 -b main .repo/local_manifests
-
 if [ ! 0 == 0 ]
- then   curl -o .repo/local_manifests  https://github.com/Harsh-Tagra/local_manifests.git
+ then   curl -o .repo/local_manifests https://github.com/Harsh-Tagra/local_manifests.git
  fi
-
-# Sync repo
 /opt/crave/resync.sh
-
-# Fixing fingerprint issue by cloning the required repository
-rm -rf vendor/fingerprint/opensource/interfaces
+# Fixing fingerprint
+rm -rf vendor/fingerprint/opensurce/interfaces
 git clone https://github.com/xiaomi-msm8953-devs/android_vendor_fingerprint_opensource_interfaces vendor/fingerprint/opensource/interfaces
-
-# Set up build environment by cloning required repository
-
-
-# Export environment variables for the build
+# Set up build environment
 export BUILD_USERNAME=harsh
 export BUILD_HOSTNAME=crave
 export BLAZE_MAINTAINER=Harsh-Tagra
 export WITH_GMS=true
-export BUILD_BROKEN_MISSING_REQUIRED_MODULES=true 
-
-
-# Source the build environment setup script
+export BUILD_BROKEN_MISSING_REQUIRED_MODULES=true
 source build/envsetup.sh
-
-# Build the environment for ysl userdebug
-lunch blaze_ysl-userdebug
-
-# Execute the build command
-make bacon
+lunch lineage_ysl-ap1a-userdebug
+mka target-files-package otatools
+/opt/crave/crave_sign.sh
+# build
+mka bacon
