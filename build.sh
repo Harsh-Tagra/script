@@ -6,7 +6,7 @@ git clone https://github.com/Harsh-Tagra/local_manifests.git --depth 1 -b main .
 if [ ! 0 == 0 ]
  then   curl -o .repo/local_manifests https://github.com/Harsh-Tagra/local_manifests.git
  fi
-/opt/crave/resync.sh
+repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags --optimized-fetch --prune
 # Fixing fingerprint
 rm -rf vendor/fingerprint/opensurce/interfaces
 git clone https://github.com/xiaomi-msm8953-devs/android_vendor_fingerprint_opensource_interfaces vendor/fingerprint/opensource/interfaces
