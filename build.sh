@@ -18,7 +18,6 @@ export WITH_GMS=true
 export BUILD_BROKEN_MISSING_REQUIRED_MODULES=true
 source build/envsetup.sh
 lunch lineage_ysl-ap1a-userdebug
-mka target-files-package otatools
-/opt/crave/crave_sign.sh
+
 # build
 mka bacon
