@@ -2,7 +2,7 @@ sudo apt install git-lfs
 git lfs install
 repo init --depth=1 -u https://github.com/CherishOS/android_manifest.git -b uqpr2 --git-lfs
 rm -rf .repo/local_manifests
-git clone https://github.com/Harsh-Tagra/local_manifests.git --depth 1 -b nohardware .repo/local_manifests
+git clone https://github.com/Harsh-Tagra/local_manifests.git --depth 1 -b cherish .repo/local_manifests
 /opt/crave/resync.sh
 # Fixing fingerprint
 sudo rm -rf vendor/fingerprint/opensource/interfaces
