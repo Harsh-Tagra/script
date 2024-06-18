@@ -9,7 +9,12 @@ sudo rm -rf vendor/fingerprint/opensource/interfaces
 git clone https://github.com/xiaomi-msm8953-devs/android_vendor_fingerprint_opensource_interfaces vendor/fingerprint/opensource/interfaces
 export BUILD_USERNAME=harsh
 export BUILD_HOSTNAME=crave
+export WITH_GMS=true
+export TARGET_USES_MINI_GAPPS=true
 source build/envsetup.sh
 brunch cherish_ysl-userdebug
-
-
+export WITH_GMS=false
+export TARGET_USES_MINI_GAPPS=false
+export CHERISH_VANILLA=true
+source build/envsetup.sh
+brunch cherish_ysl-userdebug
