@@ -16,9 +16,9 @@ for x in releasekey platform shared media networkstack verity otakey testkey sdk
   echo '' |./development/tools/make_key vendor/cherish/signing/keys/$x "$subject"; \
 done
 source build/envsetup.sh
-brunch cherish_ysl-userdebug
+brunch cherish_ysl-ap1a-userdebug
 export WITH_GMS=false
 export TARGET_USES_MINI_GAPPS=false
 export CHERISH_VANILLA=true
 source build/envsetup.sh
-brunch cherish_ysl-userdebug
+brunch cherish_ysl-ap1a-userdebug
