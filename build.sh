@@ -10,7 +10,7 @@ git clone https://github.com/xiaomi-msm8953-devs/android_vendor_fingerprint_open
 export BUILD_USERNAME=harsh
 export BUILD_HOSTNAME=crave
 export WITH_GMS=true
-export TARGET_USES_MINI_GAPPS=true
+export TARGET_USES_PICO_GAPPS=true
 subject='/C=IN/ST=Haryana/L=Panipat/O=Android/OU=Android/CN=Android/emailAddress=harshtagra905@gmail.com'
 for x in releasekey platform shared media networkstack verity otakey testkey sdk_sandbox bluetooth; do \
   echo '' |./development/tools/make_key vendor/cherish/signing/keys/$x "$subject"; \
