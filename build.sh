@@ -8,8 +8,6 @@ git clone https://github.com/Harsh-Tagra/local_manifests.git --depth 1 -b cheris
 sudo rm -rf vendor/fingerprint/opensource/interfaces
 git clone https://github.com/xiaomi-msm8953-devs/android_vendor_fingerprint_opensource_interfaces vendor/fingerprint/opensource/interfaces
 
-rm -rf hardware/qcom-caf/common
-git clone https://github.com/LineageOS/android_hardware_qcom-caf_common hardware/qcom-caf/common
 export BUILD_USERNAME=harsh
 export BUILD_HOSTNAME=crave
 export WITH_GMS=true
