@@ -11,8 +11,6 @@ git clone https://github.com/xiaomi-msm8953-devs/android_vendor_fingerprint_open
 # Set up build environment
 export BUILD_USERNAME=harsh
 export BUILD_HOSTNAME=crave
-brunch lineage_ysl-ap2a-userdebug
-source build/envsetup.sh
 export SAKURA_BUILD_TYPE=gapps
 source build/envsetup.sh
 brunch lineage_ysl-ap2a-userdebug
