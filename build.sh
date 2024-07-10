@@ -12,10 +12,8 @@ git clone https://github.com/xiaomi-msm8953-devs/android_vendor_fingerprint_open
 export BUILD_USERNAME=harsh
 export BUILD_HOSTNAME=crave
 export SAKURA_BUILD_TYPE=gapps
-export TARGET_SUPPORTS_64_BIT_APPS=true
-export TARGET_BOOT_ANIMATION_RES=720
-export SAKURA_MAINTAINER=Harsh-Tagra
 source build/envsetup.sh
 
 brunch lineage_ysl-ap2a-userdebug
+rm -rf vendor/sakura-priv
 
