@@ -17,5 +17,5 @@ export BUILD_USERNAME=harsh
 export BUILD_HOSTNAME=crave
 source build/envsetup.sh
 # build
-brunch lineage_ysl-userdebug
+lunch lineage_ysl-userdebug
 m evolution
