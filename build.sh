@@ -1,6 +1,6 @@
 # Clone Evolution X 
 rm -rf .repo/local_manifests/
-repo init -u https://github.com/Evolution-X/manifest -b u
+repo init -u https://github.com/Evolution-XYZ/manifest -b udc --git-lfs
 # Clone local_manifests repository
 
 git clone https://github.com/Harsh-Tagra/local_manifests.git --depth 1 -b main .repo/local_manifests
@@ -9,8 +9,7 @@ if [ ! 0 == 0 ]
  fi
 # repo sync
 /opt/crave/resync.sh
-# repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
-# Fixing fingerprint
+
 rm -rf vendor/fingerprint/opensurce/interfaces
 git clone https://github.com/xiaomi-msm8953-devs/android_vendor_fingerprint_opensource_interfaces vendor/fingerprint/opensource/interfaces
 # Set up build environment
