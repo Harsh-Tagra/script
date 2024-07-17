@@ -3,10 +3,8 @@ rm -rf .repo/local_manifests/
 repo init -u https://github.com/Evolution-XYZ/manifest -b udc --git-lfs
 # Clone local_manifests repository
 
-git clone https://github.com/Harsh-Tagra/local_manifests.git --depth 1 -b main .repo/local_manifests
-if [ ! 0 == 0 ]
- then   curl -o .repo/local_manifests https://github.com/Harsh-Tagra/local_manifests.git
- fi
+git clone https://github.com/Harsh-Tagra/local_manifests.git --depth 1 -b evo .repo/local_manifests
+
 # repo sync
 /opt/crave/resync.sh
 
