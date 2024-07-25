@@ -19,6 +19,5 @@ source build/envsetup.sh
 lunch lineage_ysl-userdebug
 rm -rf out/
 m clean
-m
 
 m evolution
