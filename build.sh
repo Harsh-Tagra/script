@@ -16,5 +16,10 @@ export BUILD_HOSTNAME=crave
 
 source build/envsetup.sh
 # build
+
+rm -rf out/
+m clean
+m
+
 lunch lineage_ysl-userdebug
 m evolution
