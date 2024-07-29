@@ -5,6 +5,7 @@ sudo apt-get install python2
 sudo apt-get install python3
 
 rm -rf .repo/local_manifests/
+rm -rf prebuilts/clang/host/linux-x86/
 repo init -u https://github.com/Evolution-XYZ/manifest -b udc --git-lfs
 # Clone local_manifests repository
 
