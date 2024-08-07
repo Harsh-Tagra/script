@@ -1,12 +1,8 @@
 # Clone Evolution X 
-sudo apt-get install llvm
-sudo apt-get install lld
-sudo apt-get install python2
-sudo apt-get install python3
 
 rm -rf .repo/local_manifests/
-rm -rf prebuilts/clang/host/linux-x86/
-repo init -u https://github.com/Evolution-XYZ/manifest -b udc --git-lfs
+
+repo init -u https://github.com/Evolution-X/manifest -b udc --git-lfs
 # Clone local_manifests repository
 
 git clone https://github.com/Harsh-Tagra/local_manifests.git --depth 1 -b evo .repo/local_manifests
