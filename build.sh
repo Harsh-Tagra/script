@@ -11,6 +11,7 @@ git clone https://github.com/xiaomi-msm8953-devs/android_vendor_fingerprint_open
 # Set up build environment
 export BUILD_USERNAME=harsh
 export BUILD_HOSTNAME=crave
+export RISING_BUILDTYPE="UNOFFICIAL"
 source build/envsetup.sh
 riseup ysl userdebug
 rise sb
