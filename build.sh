@@ -14,5 +14,4 @@ export BUILD_HOSTNAME=crave
 export SAKURA_BUILD_TYPE=gapps
 source build/envsetup.sh
 brunch lineage_ysl-ap2a-userdebug
-rm -rf vendor/sakura-priv
 
