@@ -13,6 +13,6 @@ export BUILD_USERNAME=harsh
 export BUILD_HOSTNAME=crave
 
 source build/envsetup.sh
-brunch lineage_ysl-ap2a-userdebug
+brunch  ysl userdebug
 
 
