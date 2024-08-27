@@ -3,7 +3,7 @@ git lfs install
 repo init --depth=1 -u  https://github.com/ProjectSakura/android.git -b 14 --git-lfs
 rm -rf .repo/local_manifests
 git clone https://github.com/Harsh-Tagra/local_manifests.git --depth 1 -b ProjectSakura .repo/local_manifests
-repo sync --force-sync --optimized-fetch -j `nproc`
+/opt/crave/resync.sh
 # Fixing fingerprint
  sudo rm -rf vendor/fingerprint/opensource/interfaces
 
