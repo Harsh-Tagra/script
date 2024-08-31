@@ -14,5 +14,6 @@ export BUILD_USERNAME=harsh
 export BUILD_HOSTNAME=crave
 export SAKURA_BUILD_TYPE=gapps
 source build/envsetup.sh
+grep -ir --exclude-dir=out -e '^((?!(?i)readme\.md).)*$' "(?i)abcdef" .
 brunch lineage_ysl-ap2a-userdebug
 
