@@ -12,6 +12,6 @@ export BUILD_USERNAME=harsh
 export BUILD_HOSTNAME=crave
 export SAKURA_BUILD_TYPE=gapps
 source build/envsetup.sh
-brunch lineage_ysl-ap2a-userdebug
+make installclean && brunch lineage_ysl-ap2a-userdebug
 
 
