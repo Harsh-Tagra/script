@@ -8,6 +8,7 @@ rm -rf prebuilts/clang/host/linux-x86
 # Fixing fingerprint
  sudo rm -rf vendor/fingerprint/opensource/interfaces
 
+git clone https://github.com/xiaomi-msm8953-devs/android_vendor_fingerprint_opensource_interfaces vendor/fingerprint/opensource/interfaces
 export BUILD_USERNAME=harsh
 export BUILD_HOSTNAME=crave
 export SAKURA_BUILD_TYPE=gapps
