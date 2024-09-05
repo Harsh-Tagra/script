@@ -9,10 +9,15 @@ rm -rf prebuilts/clang/host/linux-x86
  sudo rm -rf vendor/fingerprint/opensource/interfaces
 
 git clone https://github.com/xiaomi-msm8953-devs/android_vendor_fingerprint_opensource_interfaces vendor/fingerprint/opensource/interfaces
+
+git clone https://github.com/Harsh-Tagra/rom-keys.git /tmp/rom-keys
+sudo mv /tmp/rom-keys/sakura-priv /tmp/src/android/vendor
+sudo rm -rf /tmp/rom-keys
+
 export BUILD_USERNAME=harsh
 export BUILD_HOSTNAME=crave
 export SAKURA_BUILD_TYPE=gapps
 source build/envsetup.sh
-brunch lineage_ysl-ap2a-userdebug
+brunch lineage_ysl-ap2a-userdebug && rm -rf /vendor/sakura-priv
 
 
