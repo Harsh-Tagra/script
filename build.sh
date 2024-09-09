@@ -17,4 +17,4 @@ export BUILD_HOSTNAME=crave
 source build/envsetup.sh
 
 riseup ysl userdebug
-rise sb
+rise sb && rm -rf /vendor/lineage-priv
