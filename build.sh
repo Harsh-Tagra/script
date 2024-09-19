@@ -9,7 +9,8 @@ git clone https://github.com/Harsh-Tagra/local_manifests.git --depth 1 -b rise .
 
 git clone https://github.com/xiaomi-msm8953-devs/android_vendor_fingerprint_opensource_interfaces vendor/fingerprint/opensource/interfaces
 # Set up build environment
-
+sudo rm -rf vendor/risingOTA/risingOS.devices
+wget https://raw.githubusercontent.com/Harsh-Tagra/script/rise/risingOS.devices -P vendor/risingOTA/
 sudo rm -rf packages/apps/Updater/app/src/main/res/values/strings.xml
 wget https://raw.githubusercontent.com/Harsh-Tagra/script/rise/strings.xml -P packages/apps/Updater/app/src/main/res/values/
 sudo rm -rf vendor/rising/prebuilts/prebuilts.mk
