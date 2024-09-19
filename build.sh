@@ -9,8 +9,11 @@ git clone https://github.com/Harsh-Tagra/local_manifests.git --depth 1 -b rise .
 
 git clone https://github.com/xiaomi-msm8953-devs/android_vendor_fingerprint_opensource_interfaces vendor/fingerprint/opensource/interfaces
 # Set up build environment
+
 sudo rm -rf packages/apps/Updater/app/src/main/res/values/strings.xml
 wget https://raw.githubusercontent.com/Harsh-Tagra/script/rise/strings.xml -P packages/apps/Updater/app/src/main/res/values/
+sudo rm -rf vendor/rising/prebuilts/prebuilts.mk
+wget https://raw.githubusercontent.com/Harsh-Tagra/script/rise/prebuilts.mk -P vendor/rising/prebuilts
 sudo rm -rf packages/apps/crDroidSettings/res/values/cr_arrays.xml
 wget https://raw.githubusercontent.com/Harsh-Tagra/script/rise/cr_arrays.xml -P packages/apps/crDroidSettings/res/values/
 git clone https://github.com/Harsh-Tagra/rom-keys.git /tmp/rom-keys
