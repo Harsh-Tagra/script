@@ -11,7 +11,7 @@ export BUILD_USERNAME=harsh
 export BUILD_HOSTNAME=crave
 export BUILD_BROKEN_MISSING_REQUIRED_MODULES=true
 source build/envsetup.sh
-lunch lineage_ysl-ap3a-userdebug
+lunch lineage_ysl-ap1a-userdebug
 
 # build
 mka bacon
