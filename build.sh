@@ -9,6 +9,8 @@ git clone https://github.com/Harsh-Tagra/local_manifests.git --depth 1 -b rise .
 
 git clone https://github.com/xiaomi-msm8953-devs/android_vendor_fingerprint_opensource_interfaces vendor/fingerprint/opensource/interfaces
 # Set up build environment
+sudo rm -rf packages/apps/Updater/app/src/main/res/values/strings.xml
+
 git clone https://github.com/Harsh-Tagra/rom-keys.git /tmp/rom-keys
 sudo mv /tmp/rom-keys/rise-priv/ /tmp/src/android/vendor/lineage-priv
 sudo rm -rf /tmp/rom-keys
