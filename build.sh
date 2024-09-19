@@ -13,7 +13,7 @@ export BLAZE_MAINTAINER=Harsh-Tagra
 export WITH_GMS=false
 export BUILD_BROKEN_MISSING_REQUIRED_MODULES=true
 source build/envsetup.sh
-lunch lineage_ysl-ap1a-userdebug
+lunch lineage_ysl-ap3a-userdebug
 
 # build
 mka bacon
