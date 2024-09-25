@@ -2,7 +2,7 @@
 
 rm -rf .repo/local_manifests/
 
-repo init -u https://github.com/Evolution-X/manifest -b udc --git-lfs
+repo init -u https://github.com/Harsh-Tagra/manifest -b udc --git-lfs
 # Clone local_manifests repository
 
 git clone https://github.com/Harsh-Tagra/local_manifests.git --depth 1 -b evo .repo/local_manifests
