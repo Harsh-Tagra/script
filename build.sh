@@ -2,10 +2,10 @@
 
 rm -rf .repo/local_manifests/
 
-repo init -u https://github.com/Harsh-Tagra/manifest -b udc --git-lfs
+repo init -u https://github.com/LineageOS/android -b lineage-22.0 --git-lfs
 # Clone local_manifests repository
 
-git clone https://github.com/Harsh-Tagra/local_manifests.git --depth 1  .repo/local_manifests
+git clone https://github.com/Harsh-Tagra/local_manifests.git -b evo --depth 1  .repo/local_manifests
 
 # repo sync
 /opt/crave/resync.sh
