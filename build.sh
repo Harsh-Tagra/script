@@ -1,5 +1,6 @@
 sudo apt install git-lfs
 git lfs install
+ rm -rf .repo/local_manifests
  repo init --depth=1 -u  https://github.com/ProjectSakura/android.git -b 14 --git-lfs
  rm -rf .repo/local_manifests
  git clone https://github.com/Harsh-Tagra/local_manifests.git --depth 1 -b ProjectSakura .repo/local_manifests
