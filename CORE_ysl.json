@@ -1,28 +1,32 @@
-{
-	"response": [
-		{
-			"maintainer": "Harsh-Tagra",
-			"oem": "Xiaomi",
-			"device": "Redmi Y2/S2",
-                        "filename": "RisingOS-5.2.1-FINAL-STABLE-EOL-20241024-CORE-UNOFFICIAL-ysl-ota.zip",
-                        "download": "https://sourceforge.net/projects/ysl-roms-harsh-tagra/files/RisingTechOSS/RisingOS-5.2.1-FINAL-STABLE-EOL-20241024-CORE-UNOFFICIAL-ysl-ota.zip/download",
-                        "timestamp": 1729784242,
-                        "md5": "35a493f22104a1b511de9ae97d2fb9e3",
-                        "sha256": "0fb997fa361cf8d4620af1febc24db282257917f75bce600e40fb8074d997a45",
-                        "size": 1502220402,
-                        "version": "5.2.1-Lyonesse || oct sp",
-			"buildtype":"",
-			"forum": "",
-			"gapps": "",
-			"firmware": "",
-			"modem": "",
-			"bootloader": "",
-			"recovery": "",
-			"paypal": "",
-			"telegram": "",
-			"dt": "",
-			"common-dt": "",
-			"kernel": ""
-		}
-	]
+
+        "response": [
+                {
+                        "maintainer": "",
+                        "oem": "",
+                        "device": "",
+                        "filename": "RisingOS-6.0-BETA-20241110-CORE-UNOFFICIAL-ysl-ota.zip",
+                        "download": "https://sourceforge.net/projects/ysl-roms-harsh-tagra/files/RisingTechOSS/RisingOS-6.0-BETA-20241110-CORE-UNOFFICIAL-ysl-ota.zip/download",
+                        "timestamp": 1731245638,
+                        "md5": "dcaa60eb55860cc6e992f03d61639153",
+                        "sha256": "6fadeb034a8e8921603e36d7f9f37d97d753e90138e7e687c2d8f2da03f0aa99",
+                        "size": 1483435989,
+                        "version": "6.0-Ascension||android 15",
+                        "buildtype": "",
+                        "forum": "",
+                        "gapps": "",
+                        "firmware": "",
+                        "modem": "",
+                        "bootloader": "",
+                        "recovery": "",
+                        "paypal": "",
+                        "telegram": "",
+                        "dt": "",
+                        "common-dt": "",
+                        "kernel": ""
+                }
+        ]
 }
+
+
+
+
