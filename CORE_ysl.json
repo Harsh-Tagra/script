@@ -1,9 +1,9 @@
 {
         "response": [
                 {
-                        "maintainer": "",
-                        "oem": "",
-                        "device": "",
+                        "maintainer": "Harsh-Tagra",
+                        "oem": "Xiaomi",
+                        "device": "Redmi Y2/S2",
                         "filename": "RisingOS-6.0-BETA-20241110-CORE-UNOFFICIAL-ysl-ota.zip",
                         "download": "https://sourceforge.net/projects/ysl-roms-harsh-tagra/files/RisingTechOSS/RisingOS-6.0-BETA-20241110-CORE-UNOFFICIAL-ysl-ota.zip/download",
                         "timestamp": 1731245638,
