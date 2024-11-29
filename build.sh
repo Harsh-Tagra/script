@@ -22,6 +22,9 @@ sudo mv /tmp/rom-keys/rise-priv/ /tmp/src/android/vendor/lineage-priv
 sudo rm -rf /tmp/rom-keys
 export BUILD_USERNAME=harsh
 export BUILD_HOSTNAME=crave
+rm -rf device/xiaomi/ysl/lineage_ysl.mk
+wget  -p device/xiaomi/ysl
+
 source build/envsetup.sh
 
 riseup ysl userdebug
