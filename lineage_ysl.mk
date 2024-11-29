@@ -10,6 +10,19 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/non_ab_device.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk)
 
+
+# Flags
+TARGET_BOOT_ANIMATION_RES := 720
+TARGET_SUPPORTS_64_BIT_APPS:= true
+TARGET_ENABLE_BLUR := true
+PRODUCT_NO_CAMERA := true
+WITH_GMS := true
+TARGET_CORE_GMS := true
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    RISING_CHIPSET="Snapdragon 625" \
+    RISING_MAINTAINER="Harsh-Tagra"
+
+
 # Inherit from ysl device
 AB_OTA_UPDATER := false
 $(call inherit-product, device/xiaomi/ysl/device.mk)
