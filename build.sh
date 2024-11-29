@@ -23,7 +23,7 @@ sudo rm -rf /tmp/rom-keys
 export BUILD_USERNAME=harsh
 export BUILD_HOSTNAME=crave
 rm -rf device/xiaomi/ysl/lineage_ysl.mk
-wget  -p device/xiaomi/ysl
+wget https://raw.githubusercontent.com/Harsh-Tagra/script/rise/lineage_ysl.mk  -p device/xiaomi/ysl
 
 source build/envsetup.sh
 
