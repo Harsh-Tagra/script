@@ -22,16 +22,6 @@ sudo mv /tmp/rom-keys/rise-priv/ /tmp/src/android/vendor/lineage-priv
 sudo rm -rf /tmp/rom-keys
 sudo rm -rf device/xiaomi/ysl/lineage_ysl.mk
 wget https://raw.githubusercontent.com/Harsh-Tagra/script/rise/lineage_ysl.mk  -P device/xiaomi/ysl/
-export BUILD_USERNAME=harsh
-export BUILD_HOSTNAME=crave
-export TARGET_BOOT_ANIMATION_RES=720
-export TARGET_SUPPORTS_64_BIT_APPS=true
-export TARGET_ENABLE_BLUR=true
-export PRODUCT_NO_CAMERA=true
-export WITH_GMS=true
-export TARGET_CORE_GMS=true
-export RISING_CHIPSET="Snapdragon 625"
-export RISING_MAINTAINER="Harsh-Tagra"
 
 source build/envsetup.sh
 
