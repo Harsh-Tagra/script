@@ -19,8 +19,8 @@ PRODUCT_NO_CAMERA := true
 WITH_GMS := true
 TARGET_CORE_GMS := true
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    RISING_CHIPSET="Snapdragon 625" \
-    RISING_MAINTAINER="Harsh-Tagra"
+    RisingChipset="Snapdragon 625" \
+    RisingMaintainer="Harsh-Tagra"
 
 
 # Inherit from ysl device
