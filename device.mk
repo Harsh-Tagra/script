@@ -40,6 +40,10 @@ PRODUCT_PACKAGES += \
 # Fingerprint
 $(call soong_config_set,xiaomi_hardware_biometrics,run_32bit,true)
 
+#7SIM
+PRODUCT_PACKAGES += \
+    7SIM
+
 # Fstab
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.qcom \
