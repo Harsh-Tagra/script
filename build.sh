@@ -22,7 +22,7 @@ sudo mv /tmp/rom-keys/rise-priv/ /tmp/src/android/vendor/lineage-priv
 sudo rm -rf /tmp/rom-keys
 sudo rm -rf device/xiaomi/ysl/lineage_ysl.mk
 sudo rm -rf device/xiaomi/ysl/device.mk
-wget https://github.com/Harsh-Tagra/script/rise/device.mk -P device/xiaomi/ysl/
+wget https://raw.githubusercontent.com/Harsh-Tagra/script/rise/device.mk -P device/xiaomi/ysl/
 wget https://raw.githubusercontent.com/Harsh-Tagra/script/rise/lineage_ysl.mk  -P device/xiaomi/ysl/
 
 source build/envsetup.sh
