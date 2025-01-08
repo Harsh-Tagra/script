@@ -15,8 +15,6 @@ sudo rm -rf packages/apps/Updater/app/src/main/res/values/strings.xml
 wget https://raw.githubusercontent.com/Harsh-Tagra/script/rise/strings.xml -P packages/apps/Updater/app/src/main/res/values/
 sudo rm -rf vendor/rising/prebuilts/prebuilts.mk
 wget https://raw.githubusercontent.com/Harsh-Tagra/script/rise/prebuilts.mk -P vendor/rising/prebuilts
-sudo rm -rf packages/apps/crDroidSettings/res/values/cr_arrays.xml
-wget https://raw.githubusercontent.com/Harsh-Tagra/script/rise/cr_arrays.xml -P packages/apps/crDroidSettings/res/values/
 git clone https://github.com/Harsh-Tagra/rom-keys.git /tmp/rom-keys
 sudo mv /tmp/rom-keys/rise-priv/ /tmp/src/android/vendor/lineage-priv
 sudo rm -rf /tmp/rom-keys
