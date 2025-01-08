@@ -25,9 +25,7 @@ PRODUCT_COPY_FILES += \
 # Camera
 PRODUCT_PACKAGES += \
     camera.msm8953
-#7SIM
-PRODUCT_PACKAGES += \
-    7SIM
+
 
 # Consumer IR
 PRODUCT_PACKAGES += \
