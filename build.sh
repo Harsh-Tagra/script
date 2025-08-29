@@ -2,7 +2,7 @@
 
 rm -rf .repo/local_manifests/
 
-repo init -u https://github.com/Evolution-X -b vic --git-lfs
+repo init -u https://github.com/Evolution-X -b bka --git-lfs
 # Clone local_manifests repository
 
 git clone https://github.com/Harsh-Tagra/local_manifests.git -b evo --depth 1  .repo/local_manifests
@@ -11,6 +11,7 @@ git clone https://github.com/Harsh-Tagra/local_manifests.git -b evo --depth 1  .
 /opt/crave/resync.sh
 
 rm -rf vendor/fingerprint/opensurce/interfaces
+git clone https://github.com/Harsh-Tagra/rom-keys.git /tmp/rom-keys
 git clone https://github.com/xiaomi-msm8953-devs/android_vendor_fingerprint_opensource_interfaces vendor/fingerprint/opensource/interfaces
 # Set up build environment
 export BUILD_USERNAME=harsh
