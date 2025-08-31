@@ -19,7 +19,7 @@ export BUILD_HOSTNAME=crave
 export BUILD_BROKEN_MISSING_REQUIRED_MODULES=true
 source build/envsetup.sh
 # build
-brunch lineage_ysl-ap2a-userdebug
+brunch lineage_ysl-bp2a-userdebug
 
 
 
