@@ -9,7 +9,7 @@ git clone https://github.com/Harsh-Tagra/local_manifests.git -b evo --depth 1  .
 
 # repo sync
 /opt/crave/resync.sh
-rm -rf hardware/qcom/sm7250
+
 
 rm -rf vendor/fingerprint/opensurce/interfaces
 git clone https://github.com/Harsh-Tagra/rom-keys.git /tmp/rom-keys
