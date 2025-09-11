@@ -17,6 +17,7 @@ git clone https://github.com/xiaomi-msm8953-devs/android_vendor_fingerprint_open
 # Set up build environment
 export BUILD_USERNAME=harsh
 export BUILD_HOSTNAME=crave
+export TARGET_USES_PICO_GAPPS=true
 export BUILD_BROKEN_MISSING_REQUIRED_MODULES=true
 source build/envsetup.sh
 # build
