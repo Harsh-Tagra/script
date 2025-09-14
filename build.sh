@@ -2,7 +2,7 @@
 
 rm -rf .repo/local_manifests/
 
-repo init -u https://github.com/Evolution-X/manifest -b bka --git-lfs
+repo init -u https://github.com/Evolution-X/manifest -b vic --git-lfs
 # Clone local_manifests repository
 
 git clone https://github.com/Harsh-Tagra/local_manifests.git -b evo --depth 1  .repo/local_manifests
@@ -17,6 +17,9 @@ git clone https://github.com/xiaomi-msm8953-devs/android_vendor_fingerprint_open
 # Set up build environment
 export BUILD_USERNAME=harsh
 export BUILD_HOSTNAME=crave
+export TARGET_ENABLE_BLUR=true
+export TARGET_SUPPORTS_64_BIT_APPS=true
+export TARGET_BUILD_DEVICE_AS_WEBCAM=true
 export TARGET_USES_PICO_GAPPS=true
 export BUILD_BROKEN_MISSING_REQUIRED_MODULES=true
 source build/envsetup.sh
